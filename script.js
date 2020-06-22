@@ -1,4 +1,7 @@
 
+
+const welkom = "Welkom the the calculator made by Stéphane Willems.\nEnjoy it!!! ";
+console.log(welkom);
 const calcFull = document.querySelector('.calc-calculator');
 const buttons = calcFull.querySelectorAll('button');
 const display = document.querySelector("[name = display");
@@ -29,14 +32,14 @@ function getValue(e) {
 
     if (e.target.getAttribute("name") == "plusmin") {
         let plusminCount = 0;
-        console.log("true");
+       // console.log("true");
         if (displayNumber[0] != '-') {
             displayNumber.unshift('-');
             plusminCount++
-            console.log(displayNumber);
+            //console.log(displayNumber);
         } else {
             displayNumber.shift();
-            console.log(displayNumber);
+            //console.log(displayNumber);
             plusminCount--;
         }
     }
@@ -55,7 +58,7 @@ function getValue(e) {
 
         display.value = displayNumber.join('');
        
-        console.log("displaynummer " + displayNumber);
+       // console.log("displaynummer " + displayNumber);
     }
 
     // operations when you press a calculations button
@@ -98,10 +101,10 @@ function getValue(e) {
                     }
 
                     resultOne = FinalResult;
-                    console.log(display.value);
+                  /*   console.log(display.value);
                     console.log(`Merged Result = ${FinalResult}`);
                     console.log(`count = ${count}`);
-                    console.log(displayNumber);
+                    console.log(displayNumber); */
                     reset(displayNumber);
 
 
@@ -110,14 +113,14 @@ function getValue(e) {
                     opp = e.target.value;
                     resultOne = displayNumber.join('');
 
-                    console.log(`Result one = ${resultOne}`);
+                    /* console.log(`Result one = ${resultOne}`);
                     console.log(`Result two = ${resultTwo}`);
                     console.log(`count = ${count}`);
-                    console.log(displayNumber);
+                    console.log(displayNumber); */
                     reset(displayNumber);
         }
 
-        console.log(resultOne, opp);
+       // console.log(resultOne, opp);
 
         //display value
         FinalResult == 0 ? display.value = opp : display.value = FinalResult;
@@ -149,7 +152,7 @@ function getValue(e) {
 
             default:
                 display.value = "ERROR";
-                console.log('ERROR');
+                console.log('ERROR in operator choice');
         }
 
         reset(displayNumber);
