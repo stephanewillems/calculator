@@ -1,0 +1,191 @@
+:root {
+  --black-border: 1px solid #000;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  font-family: "Arial", sans-serif;
+  color: rgb(196, 196, 196);
+}
+
+button {
+  font-weight: 400;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+input {
+  font-weight: 400;
+  font-size: 5rem;
+  margin-top: 1rem;
+  margin-top: 1.3rem;
+  margin-right: 20px;
+  width: 100%;
+  text-align: right;
+}
+
+.calc-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  gap: 20px 1px;
+  grid-template-areas: ". title ." ". calc-calculator ." ".footer .";
+}
+
+.calc-calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 5px 5px;
+  grid-template-areas:
+    "calc-display calc-display calc-display calc-display"
+    "calc-reset calc-reset calc-backspace calc-divide"
+    "calc-seven calc-eight calc-nine calc-multiply"
+    "calc-four calc-five calc-six calc-minus"
+    "calc-one calc-two calc-three calc-add"
+    "calc-plusmin calc-zero calc-point calc-equal";
+  grid-area: calc-calculator;
+  width: 300px;
+  margin: 0 auto;
+
+  border-radius: 25px;
+  background: #f5f5f5;
+  box-shadow: 7px 7px 14px #dadada, -7px -7px 14px #ffffff;
+  padding: 20px;
+}
+
+.top-heading {
+  grid-area: footer;
+}
+.footer {
+  grid-area: footer;
+  font-size: 0.4rem;
+  font-weight: 400;
+  margin-top: 3rem;
+}
+
+.calc-display {
+  grid-area: calc-display;
+  text-align: right;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  background: #f5f5f5;
+  box-shadow: inset 5px 5px 10px #e4e3e3, inset -3px -3px 10px #ffffff;
+}
+
+.calc-display > h2 {
+  padding-right: 10px;
+  padding-top: 5px;
+  color: rgb(196, 196, 196);
+}
+
+.calc-reset {
+  grid-area: calc-reset;
+}
+
+.calc-backspace {
+  grid-area: calc-backspace;
+}
+
+.calc-divide {
+  grid-area: calc-divide;
+}
+
+.calc-multiply {
+  grid-area: calc-multiply;
+}
+
+.calc-minus {
+  grid-area: calc-minus;
+}
+
+.calc-add {
+  grid-area: calc-add;
+}
+
+.calc-equal {
+  grid-area: calc-equal;
+}
+
+.calc-zero {
+  grid-area: calc-zero;
+}
+
+.calc-one {
+  grid-area: calc-one;
+}
+
+.calc-two {
+  grid-area: calc-two;
+}
+
+.calc-three {
+  grid-area: calc-three;
+}
+
+.calc-four {
+  grid-area: calc-four;
+}
+
+.calc-five {
+  grid-area: calc-five;
+}
+
+.calc-six {
+  grid-area: calc-six;
+}
+
+.calc-seven {
+  grid-area: calc-seven;
+}
+
+.calc-eight {
+  grid-area: calc-eight;
+}
+
+.calc-nine {
+  grid-area: calc-nine;
+}
+
+.calc-plusmin {
+  grid-area: calc-plusmin;
+}
+
+.calc-point {
+  grid-area: calc-point;
+}
+
+/* NEUMORPISM CSS BUTTONS CALCULATOR CLASSES*/
+.element {
+  border-radius: 15px;
+  background: linear-gradient(145deg, #dddddd, #ffffff);
+  box-shadow: 6px 6px 13px #d0d0d0, -6px -6px 13px #ffffff;
+}
+/* .element:hover{
+  border-radius: 15px;
+  background: linear-gradient(145deg, #d1d1d1, #ebebeb);
+  box-shadow:  6px 6px 13px #d0d0d0, 
+               -6px -6px 13px #ffffff;
+               color:#FFF;
+
+} */
+
+.pressed {
+  border-radius: 15px;
+  background: #f5f5f5;
+  box-shadow: inset 6px 6px 13px #d0d0d0, inset -6px -6px 13px #ffffff;
+}
+
+/* reset style of standard button*/
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="text"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
